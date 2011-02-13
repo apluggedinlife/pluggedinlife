@@ -1,0 +1,13 @@
+*.psd
+*.ai
+*.pyc
+sprite/
+lib/
+Fonts/
+_old/
+bin/
+build/
+include/
+.Python
+.DS_Store
+*.pdf

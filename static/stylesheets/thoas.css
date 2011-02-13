@@ -1,0 +1,120 @@
+/* ****************************************************
+@file         thoas.css
+@description  thoas stylesheet
+vim: set et ts=4 sts=4 fdm=marker fenc=utf-8:
+ ***************************************************** */
+
+.icon-player {
+    background-image: url('/static/images/sprite/thoas.png');
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+}
+
+#player {
+    bottom: 150px;
+    left: 55px;
+}
+
+.player,
+.vcard, 
+ul#about-me li, 
+#presentation footer ul {
+    text-indent: -500em;
+}
+
+
+#player,
+#vcard, 
+#about-me, 
+#presentation footer ul {
+    position: absolute;
+}
+
+.player {
+    cursor: pointer;
+    background-position: 0 0;
+    width: 43px;
+    height: 99px;
+}
+
+.vcard {
+    background-position: -96px 0;
+    width: 48px;
+    height: 31px;
+}
+
+#vcard {
+    z-index: 100;
+    top: 95px;
+    left: 360px;
+}
+
+.external > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+ul#about-me {
+    top: 320px;
+    left: 195px;
+}
+
+ul#about-me li {
+    float: left;
+}
+
+.apil,
+.separator,
+.linkedin,
+.email,
+.separator-bis {
+    height: 60px;
+}
+
+.apil {
+    background-position: 0 -111px;
+    width: 28px;
+}
+
+.separator {
+    background-position: -27px -111px;
+    width: 28px;
+}
+
+.linkedin {
+    background-position: -55px -111px;
+    width: 27px;
+}
+
+.separator-bis {
+    background-position: -82px -111px;
+    width: 27px;
+}
+
+.email {
+    background-position: -109px -111px;
+    width: 29px;
+}
+
+#presentation footer ul {
+    bottom: 120px;
+    left: 290px;
+}
+
+.github {
+    background-position: -47px 0;
+    width: 34px;
+    height: 45px;
+}
+
+#location {
+    left: 171px;
+}
+
+#location a {
+    left: 300px;
+    top: 27px;
+    position: relative;
+}

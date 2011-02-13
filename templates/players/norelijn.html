@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/norelijn.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block title %}norelijn's plugged in life{% endblock %}
+
+{% block body %}
+<section id="player" class="player icon-player external">
+    <a href="#player" title="Show description">
+        <hgroup>
+            <h1>norelijn</h1>
+            <h2>Internet research analyst</h2>
+        </hgroup>
+    </a>
+</section>
+<section id="presentation">
+    <h2 id="location" class="cloud icon-global">
+        <a href="http://j.mp/eogopc" title="Location" class="icon-global external">
+            Paris, France
+        </a>
+    </h2>
+    <h3 id="twitter" class="twitter icon-global external">
+        <a href="http://twitter.com/norelijn" title="Twitter">Twitter</a>
+    </h3>
+    <p id="description" class="triangle-border-black">
+        <a href="#close" title="Close description" class="close-btn"></a>
+        I am an Internet research analyst.
+        <br />
+        <br />
+        I am interested in online reputation management, user generated content monitoring and analysis, community and knowledge management.
+        <br />
+        <br />
+        I am also a datavisualization and webdesign enthusiast.
+    </p>
+    <ul id="more-about-me">
+        <li id="youtube" class="youtube icon-player external">
+            <a href="http://www.youtube.com/user/norelijn" title="Youtube">Youtube</a>
+        </li>
+        <li id="vcard" class="vcard icon-player external">
+            <a href="{{ url_for('static', filename='norelijn.vcf') }}" title="Aurelie's vCard">Aurelie's vCard</a>
+        </li>
+        <li id="slideshare" class="slideshare icon-player external">
+            <a href="http://www.slideshare.net/norelijn" title="Slideshare">Slideshare</a>
+        </li>
+    </ul>
+    <ul id="about-me">
+        <li id="apil" class="apil icon-player external">
+            <a href="http://apluggedinlife.com" title="A plugged in life">A plugged in life</a>
+        </li>
+        <li class="separator icon-player">
+        </li>
+        <li id="delicious" class="delicious icon-player external">
+            <a href="http://delicious/norelijn" title="Delicious">Delicious</a>
+        </li>
+        <li class="separator-bis icon-player">
+        </li>
+        <li id="email" class="email icon-player external">
+            <a href="http://www.google.com/recaptcha/mailhide/d?k=01ws-xPnhX8-SjB5bxRQ9DdQ==&c=FApzCNStXHDwBNHZadgwGc4C9q2Xdmdo0xyrNUZGuGY=" title="Contact">Contact me</a>
+        </li>
+        <li class="separator-last icon-player">
+        </li>
+        <li id="skype" class="skype icon-player external">
+            <a href="http://skype.com/account/norelijn" title="norelijn">Skype</a>
+        </li>
+    </ul>
+    <footer>
+        <ul>
+            <li id="turtle" class="turtle icon-player external">
+            </li>
+        </ul>
+    </footer>
+</section>
+{% endblock %}
+

@@ -1,0 +1,425 @@
+/* ****************************************************
+@file         base.css
+@description  Base stylesheet
+vim: set et ts=4 sts=4 fdm=marker fenc=utf-8:
+ ***************************************************** */
+
+@font-face {
+    font-family: 'RetroVilleNCRegular';
+    src: url('retroville_nc-webfont.eot');
+    src: local('☺'), url('retroville_nc-webfont.woff') format('woff'), url('retroville_nc-webfont.ttf') format('truetype'), url('retroville_nc-webfont.svg#webfontHHrDOnbL') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@-webkit-keyframes bounce {
+    from { -webkit-transform:translate(0,0); }
+    to   { -webkit-transform:translate(0,-10px); }
+}
+
+/* @section GENERIC ELEMENTS {{{
+ ******************************************************************************/
+
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #BCBDC2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hgroup {
+    text-indent: -500em;
+}
+
+/*}}}*/
+
+/* @section CONTAINER {{{
+ ******************************************************************************/
+
+#wrapper {
+    width: 743px;
+    height: 650px;
+    background-color: #2d3134;
+    display: block;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -450px;
+    margin-top: -365px;
+    -webkit-border-radius: 10px 10px 70px 10px;
+    border-radius: 10px 10px 70px 10px;
+    -moz-border-radius: 10px 10px 70px 10px;
+    padding: 40px 84px;
+}
+
+#container {
+    width: 726px;
+    height: 622px;
+    border: 7px solid #000;
+    background: #7ccfff url('/static/images/background.png') no-repeat;
+}
+
+#content {
+    background: transparent url('/static/images/foreground.png') no-repeat;
+    width: 728px;
+    position: relative;
+    height: 624px;
+    left: -1px;
+}
+
+#body {
+    top: 0;
+    left: 0;
+    width: 728px;
+    height: 624px;
+    position: absolute;
+}
+
+#layer {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.9;
+    -moz-opacity: 0.9;
+    -webkit-opacity: 0.9;
+}
+
+/*}}}*/
+
+/* @section CONTENT {{{
+ ******************************************************************************/
+
+#power-button {
+    background-position: 0 0;
+    width: 60px;
+    height: 20px;
+    position: absolute;
+    top: 130px;
+    left: 15px;
+}
+
+#power-button span {
+    text-transform: uppercase;
+    font-size: 14px;
+    top: 25px;
+    color: #fff;
+    position: relative;
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+}
+
+#player:target + section#presentation p#description {
+    display: block;
+}
+
+.generic-content {
+    width: 600px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -200px;
+    position: relative;
+}
+
+.generic-content h1 {
+    font-family: 'RetroVilleNCRegular';
+    text-align: center;
+    line-height: 40px;
+    font-size: 21px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/*}}}*/
+
+/* @section GENERIC CLASSES {{{
+ ******************************************************************************/
+
+.icon-global {
+    background-image: url('/static/images/sprite/global.png');
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+}
+
+.clear {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.triangle-border-black,
+.triangle-border-white {
+    position: relative;
+    padding: 15px;
+    margin: 1em 0 3em;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.triangle-border-black {
+    border: 5px solid #000;
+    color: #333;
+    background: #fff;
+}
+
+.triangle-border-white {
+    border: 5px solid #fff;
+    color: #333;
+    background: #fff;
+}
+
+.triangle-border-black:before,
+.triangle-border-white:before {
+    content: "";
+    display: block; /* reduce the damage in FF3.0 */
+    position: absolute;
+    bottom: -40px; /* value = - border-top-width - border-bottom-width */
+    left: 40px; /* controls horizontal position */
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+}
+
+.triangle-border-black:before {
+    border-top-color: #000;
+}
+
+.triangle-border-white:before {
+    border-top-color: #fff;
+}
+
+.triangle-border-black:after,
+.triangle-border-white:after {
+    content: "";
+    display: block; /* reduce the damage in FF3.0 */
+    position: absolute;
+    bottom: -26px; /* value = - border-top-width - border-bottom-width */
+    left: 47px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+    width: 0;
+    height: 0;
+    border: 13px solid transparent;
+}
+
+.triangle-border-black:after {
+    border-top-color: #fff;
+}
+
+.triangle-border-white:after {
+    border-top-color: #fff;
+}
+
+.close-btn {
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    height: 0;
+    width: 18px;
+    padding: 18px 0 0 0;
+    overflow: hidden;
+    background: #000000 none;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.close-btn:before {
+    content: "\D7";
+    display: block;
+    text-align: center;
+    width: 18px;
+    position: absolute;
+    top: -1.8px;
+    left: 0;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: "Helvetica Neue", Consolas, Verdana, Tahoma, Calibri, Helvetica, Menlo, "Droid Sans", sans-serif;
+    top: -2px;
+    left: 1px;
+}
+
+/*}}}*/
+
+/* @section SPRITE ITEMS {{{
+ ******************************************************************************/
+
+#description {
+    position: absolute;
+    width: 375px;
+    bottom: 225px;
+    left: 20px;
+    z-index: 10;
+    display: none;
+    font-family: 'RetroVilleNCRegular';
+    font-size: 12px;
+}
+
+.cloud a, 
+.twitter {
+    text-indent: -500em;
+}
+
+.cloud {
+    background-position: 0 -63px;
+    width: 497px;
+    height: 115px;
+    position: absolute;
+    left: 171px;
+}
+
+.cloud a {
+    background-position: -78px 0;
+    width: 64px;
+    height: 26px;
+    display: block;
+}
+
+.twitter {
+    background-position: -159px 0;
+    width: 70px;
+    height: 46px;
+    position: absolute;
+}
+
+#twitter {
+    right: 85px;
+    top: 105px;
+}
+
+#cv {
+    background-position: -159px 0;
+    text-indent: -500em;
+    bottom: 342px;
+    right: 72px;
+    position: absolute;
+}
+
+#cv p, 
+#cv,
+#cv p a {
+    display: block;
+    width: 16px;
+    height: 9px;
+}
+
+/*}}}*/
+
+/* @section PLAYER LIST {{{
+ ******************************************************************************/
+
+ul.player-list {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 400px;
+}
+
+ul.player-list li {
+    position: relative;
+    float: left;
+    width: 145px;
+}
+
+ul.player-list li p {
+    position: relative;
+    top: 0;
+    text-align: center;
+    margin: 1em 0px 2em;
+    left: 5px;
+    font-size: 12px;
+    visibility: hidden;
+    font-family: 'RetroVilleNCRegular';
+    -webkit-animation:bounce .4s ease infinite alternate;
+}
+
+ul.player-list li:hover p {
+    visibility: visible;
+}
+
+ul.player-list li a {
+    text-indent: -500em;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+ul.player-list li:not(:last-child) {
+    margin-right: 100px;
+}
+
+ul.player-list li.thoas a,
+ul.player-list li.norelijn a {
+    background-image: url('/static/images/sprite/players.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin: 0 auto;
+}
+
+ul.player-list li.thoas a {
+    width: 43px;
+    height: 98px;
+}
+
+ul.player-list li.norelijn a {
+    width: 40px;
+    height: 97px;
+}
+
+ul.player-list li.thoas:hover a {
+    background-position: 0 0;
+}
+
+ul.player-list li.thoas a {
+    background-position: -43px 0;
+}
+
+ul.player-list li.norelijn:hover a {
+    background-position: 0 -111px;
+}
+
+ul.player-list li.norelijn a {
+    background-position: -43px -111px;
+}
+
+/*}}}*/
+
+/* @section FOOTER {{{
+ ******************************************************************************/
+
+#apluggedinlife {
+    width: 726px;
+    padding-top: 7px;
+}
+
+#apluggedinlife, 
+#apluggedinlife a {
+    width: 25px;
+    height: 42px;
+    text-indent: -500em;
+    display: block;
+}
+
+#apluggedinlife a {
+    background-position: -240px 0;
+}
+
+/*}}}*/

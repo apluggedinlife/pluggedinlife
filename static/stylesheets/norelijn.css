@@ -1,0 +1,150 @@
+/* ****************************************************
+@file         norelijn.css
+@description  norelijn stylesheet
+vim: set et ts=4 sts=4 fdm=marker fenc=utf-8:
+ ***************************************************** */
+
+.icon-player {
+    background-image: url('/static/images/sprite/norelijn.png');
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+}
+
+#player {
+    bottom: 150px;
+    left: 55px;
+}
+
+.player {
+    cursor: pointer;
+    background-position: 0 0;
+    width: 40px;
+    height: 97px;
+}
+
+.player,
+ul#about-me li, 
+#presentation footer ul, 
+#more-about-me {
+    text-indent: -500em;
+}
+
+#player,
+#about-me, 
+#presentation footer ul, 
+#more-about-me {
+    position: absolute;
+}
+
+.external > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+ul#about-me {
+    top: 320px;
+    left: 160px;
+}
+
+ul#about-me li {
+    float: left;
+}
+
+.apil,
+.separator,
+    .separator-last,
+.delicious,
+.skype,
+.email,
+.separator-bis {
+    height: 65px;
+}
+
+.apil {
+    background-position: 0 -111px;
+    width: 28px;
+}
+
+.separator {
+    background-position: -27px -111px;
+    width: 33px;
+}
+
+.delicious {
+    background-position: -59px -111px;
+    width: 30px;
+}
+
+.separator-bis {
+    background-position: -89px -111px;
+    width: 28px;
+}
+
+.email {
+    background-position: -117px -111px;
+    width: 30px;
+}
+
+.separator-last {
+    background-position: -146px -111px;
+    width: 30px;
+}
+
+.skype {
+    background-position: -176px -111px;
+    width: 31px;
+}
+
+#location {
+    left: 171px;
+}
+
+#location a {
+    left: 300px;
+    top: 27px;
+    position: relative;
+}
+
+#presentation footer ul {
+    bottom: 123px;
+    left: 278px;
+}
+
+.turtle {
+    background-position: -47px 0;
+    width: 45px;
+    height: 34px;
+}
+
+#more-about-me {
+    top: 95px;
+    left: 325px;
+    width: 109px;
+}
+
+ul#more-about-me li {
+    float: left;
+}
+
+.youtube,
+.vcard,
+.slideshare {
+    height: 34px;
+}
+
+.youtube {
+    background-position: -95px 0;
+    width: 31px;
+}
+
+.vcard {
+    background-position: -126px 0;
+    width: 48px;
+}
+
+.slideshare {
+    background-position: -175px 0;
+    width: 30px;
+}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Please select player | plugged in life{% endblock %}
+
+{% block body %}
+<div id="layer">
+</div>
+<div id="body">
+    <section id="player-list" class="generic-content">
+        <h1>Please select <br />player</h1>
+        <ul class="player-list">
+            {% for player in players %}
+            <li class="{{ player }}">
+                <p class="triangle-border-white">
+                    {{ player }}
+                </p>
+                <a href="{{ url_for('get', username=player) }}">{{ player }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="clear"></div>
+    </section>
+</div>
+{% endblock %}

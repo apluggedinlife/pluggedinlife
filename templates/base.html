@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <title>{% block title %}Plugged in life{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/reset.css') }}" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/base.css') }}" type="text/css" media="screen" />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
+        {% block extra_head %}
+
+        {% endblock %}
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="power-button" class="icon-global">
+                <span>power</span>
+            </div>
+            <div id="container">
+                <div id="content">
+                    {% block body %}
+                    
+                    {% endblock %}
+                </div>
+            </div>
+            <div id="apluggedinlife">
+                <a href="http://apluggedinlife.com" class="icon-global" title="A plugged in life">
+                    A plugged in life
+                </a>
+            </div>
+        </div>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-5309752-7']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </body>
+</html>

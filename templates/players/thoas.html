@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/thoas.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block title %}thoas' plugged in life{% endblock %}
+
+{% block body %}
+<section id="player" class="player icon-player external">
+    <a href="#player" title="Show description">
+        <hgroup>
+            <h1>Florent Messa</h1>
+            <h2>Software / Backend developer</h2>
+        </hgroup>
+    </a>
+</section>
+<section id="presentation">
+    <h1 id="vcard" class="vcard icon-player external">
+        <a href="{{ url_for('static', filename='thoas.vcf') }}" title="Florent's vCard">Florent's vCard</a>
+    </h1>
+    <h2 id="location" class="cloud icon-global">
+        <a href="http://j.mp/eogopc" title="Location" class="icon-global external">
+            Paris, France
+        </a>
+    </h2>
+    <h3 id="twitter" class="twitter icon-global external">
+        <a href="http://twitter.com/thoas" title="Twitter">Twitter</a>
+    </h3>
+    <p id="description" class="triangle-border-black">
+        <a href="#close" title="Close description" class="close-btn"></a>
+        I am a PHP developer and also a Python enthusiast and evangelist with JavaScript skills.
+        <br />
+        <br />
+        With PHP, I like to use Zend and Symfony frameworks and when coding with Python I am fond of Django framework.
+    </p>
+    <ul id="about-me">
+        <li id="apil" class="apil icon-player external">
+            <a href="http://apluggedinlife.com" title="A plugged in life">A plugged in life</a>
+        </li>
+        <li class="separator icon-player">
+        </li>
+        <li id="linkedin" class="linkedin icon-player external">
+            <a href="http://www.linkedin.com/in/fmessa" title="Linkedin">Linkedin</a>
+        </li>
+        <li class="separator-bis icon-player">
+        </li>
+        <li id="email" class="email icon-player external">
+            <a href="http://www.google.com/recaptcha/mailhide/d?k=01ws-xPnhX8-SjB5bxRQ9DdQ==&c=g2IjXbqymMmoMpS4__kYSnDjPtLzGuCR51meILS_kY8=" title="Contact">Contact me</a>
+        </li>
+    </ul>
+    <footer>
+        <ul>
+            <li id="github" class="github icon-player external">
+                <a href="http://github.com/thoas" title="GitHub">GitHub</a>
+            </li>
+        </ul>
+    </footer>
+</section>
+<section id="cv" class="flag icon-player">
+    <p>
+        <a href="{{ url_for('static', filename='CV.pdf') }}" title="Download the CV">Download the CV</a>
+    </p>
+</section>
+{% endblock %}
