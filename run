@@ -1,0 +1,10 @@
+#!/bin/bash
+
+GUNICORN=/var/www/pluggedinlife/bin/gunicorn
+ROOT=/var/www/pluggedinlife
+PID=/var/run/gunicorn_pluggedinlife.pid
+
+if [ -f $PID ]; then rm $PID; fi
+
+cd $ROOT
+exec $GUNICORN -b 127.0.0.1:5000 --pid=$PID server:app
